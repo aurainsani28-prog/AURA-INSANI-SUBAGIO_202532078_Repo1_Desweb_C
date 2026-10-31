@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulir pelaporan penampakan burung liar di Jakarta.">
+  <title>Lapor Penampakan | Kicau Kota</title>
+</head>
+<body>
+  <a href="#konten">Lompat ke konten utama</a>
+
+  <header>
+    <h1>Kicau Kota</h1>
+    <p>Panduan dan pelaporan pengamatan burung liar di Jakarta</p>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="spesies.html">Katalog Spesies</a></li>
+        <li><a href="panduan.html">Panduan Pengamatan</a></li>
+        <li><a href="lapor.html">Lapor Penampakan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="konten">
+    <h2>Lapor Penampakan Burung</h2>
+    <p>Isi formulir berikut berdasarkan hasil pengamatanmu. Kolom bertanda bintang (*)
+      wajib diisi.</p>
+
+    <form action="lapor.html" method="get">
+
+      <fieldset>
+        <legend>Data Pelapor</legend>
+
+        <p>
+          <label for="nama">Nama lengkap *</label><br>
+          <input type="text" id="nama" name="nama"
+                 placeholder="Contoh: Rina Maharani"
+                 minlength="3" maxlength="60" required autocomplete="name">
+        </p>
+
+        <p>
+          <label for="email">Alamat email *</label><br>
+          <input type="email" id="email" name="email"
+                 placeholder="nama@contoh.com"
+                 required autocomplete="email">
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Data Pengamatan</legend>
+
+        <p>
+          <label for="tanggal">Tanggal pengamatan *</label><br>
+          <input type="date" id="tanggal" name="tanggal" required>
+        </p>
+
+        <p>
+          <label for="spesies">Spesies yang terlihat *</label><br>
+          <select id="spesies" name="spesies" required>
+            <option value="">-- Pilih spesies --</option>
+            <option value="elang-bondol">Elang-bondol</option>
+            <option value="cucak-kutilang">Cucak kutilang</option>
+            <option value="burung-gereja">Burung-gereja erasia</option>
+            <option value="cekakak-sungai">Cekakak sungai</option>
+            <option value="cabai-jawa">Cabai jawa</option>
+            <option value="kipasan-belang">Kipasan belang</option>
+            <option value="tekukur">Tekukur biasa</option>
+            <option value="walet-linchi">Walet-linchi</option>
+            <option value="lainnya">Lainnya / belum tahu</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="jumlah">Jumlah individu (1 - 200) *</label><br>
+          <input type="number" id="jumlah" name="jumlah" min="1" max="200" value="1" required>
+        </p>
+
+        <fieldset>
+          <legend>Tipe lokasi *</legend>
+          <p>
+            <input type="radio" id="lokasi-taman" name="lokasi" value="taman" required>
+            <label for="lokasi-taman">Taman atau hutan kota</label>
+          </p>
+          <p>
+            <input type="radio" id="lokasi-pesisir" name="lokasi" value="pesisir">
+            <label for="lokasi-pesisir">Pesisir atau mangrove</label>
+          </p>
+          <p>
+            <input type="radio" id="lokasi-rumah" name="lokasi" value="permukiman">
+            <label for="lokasi-rumah">Permukiman</label>
+          </p>
+          <p>
+            <input type="radio" id="lokasi-gedung" name="lokasi" value="gedung">
+            <label for="lokasi-gedung">Area gedung atau perkantoran</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Perilaku yang teramati</legend>
+          <p>
+            <input type="checkbox" id="perilaku-makan" name="perilaku" value="makan">
+            <label for="perilaku-makan">Mencari makan</label>
+          </p>
+          <p>
+            <input type="checkbox" id="perilaku-sarang" name="perilaku" value="bersarang">
+            <label for="perilaku-sarang">Membuat sarang</label>
+          </p>
+          <p>
+            <input type="checkbox" id="perilaku-kicau" name="perilaku" value="berkicau">
+            <label for="perilaku-kicau">Berkicau</label>
+          </p>
+          <p>
+            <input type="checkbox" id="perilaku-kawanan" name="perilaku" value="berkawanan">
+            <label for="perilaku-kawanan">Terbang berkawanan</label>
+          </p>
+        </fieldset>
+
+        <p>
+          <label for="catatan">Catatan tambahan</label><br>
+          <textarea id="catatan" name="catatan" rows="4" cols="45" maxlength="300"
+                    placeholder="Ciri khusus, lokasi persis, atau hal menarik lainnya"></textarea>
+        </p>
+      </fieldset>
+
+      <p>
+        <input type="checkbox" id="setuju" name="setuju" value="ya" required>
+        <label for="setuju">Saya menyatakan data di atas berasal dari pengamatan
+          saya sendiri. *</label>
+      </p>
+
+      <p>
+        <button type="submit">Kirim Laporan</button>
+        <button type="reset">Kosongkan Formulir</button>
+      </p>
+    </form>
+  </main>
+
+  <footer>
+    <nav aria-label="Navigasi footer">
+      <a href="index.html">Beranda</a> |
+      <a href="spesies.html">Katalog Spesies</a> |
+      <a href="panduan.html">Panduan Pengamatan</a> |
+      <a href="lapor.html">Lapor Penampakan</a>
+    </nav>
+    <p><small>&copy; 2026 Kicau Kota. Proyek praktikum Desain Web, Institut Teknologi
+      PLN.</small></p>
+  </footer>
+</body>
+</html>
